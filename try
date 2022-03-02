@@ -1,0 +1,13 @@
+a = input('Podaj liczbe calkowita: ')
+b = input('Podaj druga liczbe calkowita: ')
+
+try:
+    a = int(a)
+    b = int(b)
+
+    wynik = a/b
+    print(wynik)
+except ZeroDivisionError:
+    print('nie mozna dzielic przez 0')
+except ValueError:
+    print('znak musi byc liczba calkowita')
