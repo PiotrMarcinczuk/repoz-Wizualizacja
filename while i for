@@ -1,0 +1,28 @@
+# # licznik = 0
+# # while licznik != 11:
+# #     print(licznik)
+# #
+# #     licznik += 1
+#
+# lista = [4, 8, 5, 3, 2, 9, 7]
+# licznik = 0
+# liczba = input('wpisz liczbe calkowita: ')
+#
+# while licznik != len(lista):
+#     if int(liczba) - lista[licznik] == 0:
+#         print('liczba ' + str(liczba) + ' - ' + str(lista[licznik]) + ' = 0')
+#         break
+#     else:
+#         licznik += 1
+# else:
+#     print('zadna z wartosci nie dala odpowiedniego wyniku')
+
+# lista1 = [4, 6, 8, 1, 6, 7, 2, 9]
+# lista2 = [5, 6, 7, 8, 9]
+# suma = []
+# 
+# for a in lista1:
+#     for b in lista2:
+#         wynik = a + b
+#         suma.append(wynik)
+#     print(suma)
