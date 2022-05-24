@@ -1,0 +1,44 @@
+#zadanie 1
+import numpy as np
+a=np.arange(4,84,4)
+print(a)
+#zadanie 2
+b=[5.3,4.2,5.9,3.3,4.5,4]
+c=np.array(b, dtype="int32")
+print(c)
+#zadanie 3
+def tablicaNWymiarowa(n):
+    m=np.zeros((pow(2,n),pow(2,n)))
+    return m
+print(tablicaNWymiarowa(3))
+#zadanie 4
+def generuj(liczba, rozmiarTablicy):
+    wynik=np.logspace(1,rozmiarTablicy,num=rozmiarTablicy,base=liczba, dtype="int32")
+    return wynik
+print(generuj(3,4))
+#zadanie 5
+def wektor(dlugoscWektora):
+    a=np.arange(dlugoscWektora)
+    odwrocony=a[::-1]
+    macierz=np.diag([a for a in odwrocony],2)
+    return macierz
+print(wektor(5))
+#zadanie 6
+wykreslanka=np.array([["s","l","o","w","o","t","o","k"],["x","d","f","ó","j","a","e","p"],["p","o","r","ł","z","n","d","k"]])
+print(wykreslanka)
+#zadanie 7
+def macierz(n):
+    x=np.zeros((n,n))
+    for i in range(0,n):
+        for j in range(0,n):
+            if(j>i):
+                x[i,j]=abs(2*(j-i+1))
+            else:
+                x[i,j]=abs(2*(i-j+1))
+
+    return x
+print(macierz(3))
+#zadanie 8
+#zadanie 9
+macierz5x5=np.array()
+print(macierz5x5)
