@@ -1,0 +1,53 @@
+import numpy as np
+import pandas as pd
+import matplotlib.pyplot as plt
+import seaborn as sns
+#zadanie 1
+# def f(x):
+#     return (pow(x, 2)+4*x)/np.sin(x)
+# x=np.linspace(1,20)
+# plt.plot(x,f(x),label='f(x):x^2+4*x/sin(x)')
+# plt.xlabel('x')
+# plt.ylabel('f(x)')
+# plt.tick_params(axis='y', which='major', labelsize=6)
+# plt.title('Wykres funkcji f(x) dla x [1,20]')
+# plt.legend(loc='upper right')
+# plt.show()
+#zadanie 2
+x=np.arange(-30,30,0.1)
+y1=np.tan(x)*np.sin(x)
+y2=np.sin(x)+np.tan(x)
+plt.subplots(2,2)
+plt.plot(x,y1, label='tan(x)*sin(x)',linestyle = 'dashed', color='green')
+plt.legend(loc='lower center')
+plt.xlim(xmin=-2, xmax=2)
+plt.ylim(ymin=-35, ymax=15)
+plt.xlabel('x')
+plt.ylabel('wykres funkcji tan(x)*sin(x)')
+plt.subplot(2,1,1)
+plt.plot(x,y2, label='sin(x)+tan(x)')
+plt.xlim(xmin=-3, xmax=3)
+plt.ylim(ymin=-25, ymax=25)
+plt.xlabel('x')
+plt.ylabel('wykres funkcji sin(x)+tan(x)')
+plt.savefig('Pawel_bak_zad2.png')
+plt.show()
+#zadanie 3
+# df=pd.read_csv('iris.data', header=0, sep=',', decimal='.')
+# sns.set()
+# plot=sns.relplot(data=df[df['class']=='Iris-versicolor'], x="petal length", y="petal width",
+#                  hue='class',palette=['red'], legend=True)
+# plot.fig.set_size_inches(6,6)
+# plt.show()
+#zadanie4
+# df=pd.read_csv('automobile.csv', header=0, sep=';', decimal='.')
+# grupa=df.groupby('Car model').agg({'Price':'sum'})
+# print(grupa)
+# sns.set()
+# plot=sns.catplot(data=df, x='Car model', y='Price',
+#                  kind='bar', ci=None,
+#                  dodge=False, palette='bright',
+#                  legend_out=False)
+# plot.fig.set_size_inches(8,6)
+# plot.set(title="Ceny samochodów")
+# plt.show()
